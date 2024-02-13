@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry Genius</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
+    <style>
+      .inter{
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
 
-<body>
-    <header>
-
+  <body class="px-12">
+    <header class="mb-12">
+      <nav>
+        <div class="navbar bg-base-100 ">
+          <div class="navbar-start">
+            <p class="text-[rgba(17, 17, 17, 0.80)] text-[45px] font-bold">Interactive
+              <span class="block text-[rgba(17, 17, 17, 0.60)] text-3xl font-medium leading-10 tracking-[1.5px]">Geometry Genius</span></p>
+          </div>
+  
+          <div class="navbar-end">
+            <a class=" bg-blue-600 text-white py-2 px-9 rounded-lg leading-7 font-bold text-xl">Blog</a>
+          </div>
+        </div>
+      </nav>
     </header>
-    
+    <main class="flex gap-6 mx-auto">
+      <section class="content flex-1 p-4 bg-slate-400"></section>
+      <aside class="result w-[440px] p-4 bg-slate-400"></aside>
+    </main>
     <script src="scripts/area-calculator.js"></script>
-</body>
-
+  </body>
 </html>
