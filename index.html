@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geometry Genius</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
       rel="stylesheet"
@@ -14,7 +17,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .inter{
+      .inter {
         font-family: "Inter", sans-serif;
       }
     </style>
@@ -22,22 +25,282 @@
 
   <body class="px-12">
     <header class="mb-12">
+      <!-- navbar -->
       <nav>
-        <div class="navbar bg-base-100 ">
+        <div class="navbar bg-base-100">
           <div class="navbar-start">
-            <p class="text-[rgba(17, 17, 17, 0.80)] text-[45px] font-bold">Interactive
-              <span class="block text-[rgba(17, 17, 17, 0.60)] text-3xl font-medium leading-10 tracking-[1.5px]">Geometry Genius</span></p>
+            <p class="text-[rgba(17, 17, 17, 0.80)] text-[45px] font-bold">
+              Interactive
+              <span
+                class="block text-[rgba(17, 17, 17, 0.60)] text-3xl font-medium leading-10 tracking-[1.5px]"
+                >Geometry Genius</span
+              >
+            </p>
           </div>
-  
+
           <div class="navbar-end">
-            <a class=" bg-blue-600 text-white py-2 px-9 rounded-lg leading-7 font-bold text-xl">Blog</a>
+            <a
+              class="bg-blue-600 text-white py-2 px-9 rounded-lg leading-7 font-bold text-xl"
+              >Blog</a
+            >
           </div>
         </div>
       </nav>
     </header>
-    <main class="flex gap-6 mx-auto">
-      <section class="content flex-1 p-4 bg-slate-400"></section>
-      <aside class="result w-[440px] p-4 bg-slate-400"></aside>
+    <main class="flex flex-col lg:flex-row gap-6 mx-auto">
+      <!-- main content -->
+      <section class="content flex-1 p-4 ">
+        <div class="grid gap-6 2xl:grid-cols-3 md:grid-cols-2 grid-cols-1">
+          <!-- card one -->
+          <div class="card shadow-xl hover:bg-[#FBBCED]">
+            <figure class="px-10 pt-10">
+              <img src="./images/triangle.png" alt="Triangle" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-2xl font-bold">Triangle</h2>
+              <p>Area (A) = 0.5 x b x h</p>
+              <form
+                class="inputForm card-actions flex flex-col lg:gap-12 md:gap-8 gap-4 lg:mt-5 md:mt-3 mt-2" data-shape="triangle"
+              >
+                <div
+                  class="flex gap-4 flex-col 2xl:flex-row justify-center items-center"
+                >
+                  <div class="group-input flex items-center gap-2">
+                    <input
+                      type="text"
+                      class=" flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded"
+                      placeholder="b"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                  <div class="group-input flex gap-2 items-center">
+                    <input
+                      type="text"
+                      class="flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded "
+                      placeholder="h"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                </div>
+                <button
+                  class="bg-blue-600 text-white py-2 px-9 rounded-lg leading-7 font-bold text-xl w-full"
+                >
+                  Calculate
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- card two -->
+          <div class="card shadow-xl hover:bg-[#B2F069]">
+            <figure class="px-10 pt-10 h-[41.5%]">
+              <img src="./images/rectangle.png" alt="Rectangle" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-2xl font-bold">Rectangle</h2>
+              <p>Area (A) = w x l</p>
+              <form
+              class="inputForm card-actions flex flex-col lg:gap-12 md:gap-8 gap-4 lg:mt-5 md:mt-3 mt-2" data-shape="rectangle"
+              >
+                <div
+                  class="flex gap-4 flex-col 2xl:flex-row justify-center items-center"
+                >
+                  <div class="group-input flex items-center gap-2">
+                    <input
+                      type="text"
+                      class=" flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded"
+                      placeholder="w"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                  <div class="group-input flex gap-2 items-center">
+                    <input
+                      type="text"
+                      class="flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded "
+                      placeholder="l"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                </div>
+                <button
+                  class="bg-blue-600 text-white py-2 px-9 rounded-lg leading-7 font-bold text-xl w-full"
+                >
+                  Calculate
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- card three -->
+          <div class="card shadow-xl hover:bg-[#FEFF5B]">
+            <figure class="px-10 pt-10 h-[41.5%]">
+              <img src="./images/parallelogram.png" alt="parallelogram" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-2xl font-bold">Parallelogram</h2>
+              <p>Area (A) = b x h</p>
+              <form
+              class="inputForm card-actions flex flex-col lg:gap-12 md:gap-8 gap-4 lg:mt-5 md:mt-3 mt-2" data-shape="parallelogram"
+              >
+                <div
+                  class="flex gap-4 flex-col 2xl:flex-row justify-center items-center"
+                >
+                  <div class="group-input flex items-center gap-2">
+                    <input
+                      type="text"
+                      class=" flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded"
+                      placeholder="b"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                  <div class="group-input flex gap-2 items-center">
+                    <input
+                      type="text"
+                      class="flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded "
+                      placeholder="h"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                </div>
+                <button
+                  class="bg-blue-600 text-white py-2 px-9 rounded-lg leading-7 font-bold text-xl w-full"
+                >
+                  Calculate
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- card four -->
+          <div class="card shadow-xl hover:bg-[#69C7F0]">
+            <figure class="px-10 pt-10">
+              <img src="./images/rhombus.png" alt="rhombus" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-2xl font-bold">Rhombus</h2>
+              <p>Area (A) = 0.5 x <span>d <sub>1</sub></span> x <span>d <sub>2</sub></span></p>
+              <form
+              class="inputForm card-actions flex flex-col lg:gap-12 md:gap-8 gap-4 lg:mt-5 md:mt-3 mt-2" data-shape="rhombus"
+              >
+                <div
+                  class="flex gap-4 flex-col 2xl:flex-row justify-center items-center"
+                >
+                  <div class="group-input flex items-center gap-2">
+                    <input
+                      type="text"
+                      class=" flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded"
+                      placeholder="d1"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                  <div class="group-input flex gap-2 items-center">
+                    <input
+                      type="text"
+                      class="flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded "
+                      placeholder="d2"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                </div>
+                <button
+                  class="bg-blue-600 text-white py-2 px-9 rounded-lg leading-7 font-bold text-xl w-full"
+                >
+                  Calculate
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- card five -->
+          <div class="card shadow-xl hover:bg-[#D9D9D9]">
+            <figure class="px-10 pt-10">
+              <img src="./images/pentagon.png" alt="pentagon" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-2xl font-bold">Pentagon</h2>
+              <p>Area (A) = 0.5 x p x b</p>
+              <form
+              class="inputForm card-actions flex flex-col lg:gap-12 md:gap-8 gap-4 lg:mt-5 md:mt-3 mt-2" data-shape="pentagon"
+              >
+                <div
+                  class="flex gap-4 flex-col 2xl:flex-row justify-center items-center"
+                >
+                  <div class="group-input flex items-center gap-2">
+                    <input
+                      type="text"
+                      class=" flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded"
+                      placeholder="p"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                  <div class="group-input flex gap-2 items-center">
+                    <input
+                      type="text"
+                      class="flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded "
+                      placeholder="b"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                </div>
+                <button
+                  class="bg-blue-600 text-white py-2 px-9 rounded-lg leading-7 font-bold text-xl w-full"
+                >
+                  Calculate
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- card six -->
+          <div class="card shadow-xl hover:bg-[#FBBCED]">
+            <figure class="px-10 pt-10 h-[41.5%]">
+              <img src="./images/ellipse.png" alt="ellipse" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-2xl font-bold">Ellipse</h2>
+              <p>Area (A) = πab</p>
+              <form
+              class="inputForm card-actions flex flex-col lg:gap-12 md:gap-8 gap-4 lg:mt-5 md:mt-3 mt-2" data-shape="ellipse"
+              >
+                <div
+                  class="flex gap-4 flex-col 2xl:flex-row justify-center items-center"
+                >
+                  <div class="group-input flex items-center gap-2">
+                    <input
+                      type="text"
+                      class=" flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded"
+                      placeholder="a"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                  <div class="group-input flex gap-2 items-center">
+                    <input
+                      type="text"
+                      class="flex-1 2xl:w-24 w-3/4 h-8 px-3 py-2 rounded "
+                      placeholder="b"
+                    />
+                    <span class="text-[#414141] max-2xl:w-1/4">cm</span>
+                  </div>
+                </div>
+                <button
+                  class="bg-blue-600 text-white py-2 px-9 rounded-lg leading-7 font-bold text-xl w-full"
+                >
+                  Calculate
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- result display section -->
+      <aside class="result w-full lg:w-[440px] p-4 ">
+        <div class="card shadow-xl">
+          <div class="card-body text-center">
+            <h2 class="card-title underline text-xl font-bold leading-7 decoration-solid mx-auto">Area Calculation</h2>
+           
+            <div class="card-actions">
+              <ol class="result-list list-decimal w-full">
+               
+              </ol>
+            </div>
+          </div>
+        </div>
+      </aside>
     </main>
     <script src="scripts/area-calculator.js"></script>
   </body>
